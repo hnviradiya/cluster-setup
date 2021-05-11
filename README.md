@@ -42,6 +42,12 @@ After the above commands are successfully run on all the worker nodes. Below ste
 
 #### On Leader Node
 
+If you are running in Virtual Machine make sure to disable swap if already enabled using below command.
+
+```
+sudo swapoff -a
+```
+
 Run the below command on the node that you want to make the leader node. Please make sure you replace the correct IP of the node with `IP-of-Node`
 
 ```
