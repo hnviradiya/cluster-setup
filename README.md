@@ -57,6 +57,12 @@ kubeadm init --apiserver-advertise-address=${MASTER_IP} --pod-network-cidr=10.24
 
 #### Join worker nodes to the Leader node
 
+If you are running in Virtual Machine make sure to disable swap if already enabled using below command.
+
+```
+sudo swapoff -a
+```
+
 Once the command `kubeadm init` is completed on the leader node, below we would get a command like below in the output of `kubeadm init` that can be run on worker nodes to make them join the leader node.
 
 ```
