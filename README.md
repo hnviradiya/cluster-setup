@@ -55,6 +55,20 @@ export MASTER_IP=<IP-of-Node>
 kubeadm init --apiserver-advertise-address=${MASTER_IP} --pod-network-cidr=10.244.0.0/16
 ```
 
+To start using your cluster, you need to run the following as a regular user:
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+Run the following commands on kube-01:
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
 #### Join worker nodes to the Leader node
 
 If you are running in Virtual Machine make sure to disable swap if already enabled using below command.
