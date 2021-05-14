@@ -106,3 +106,7 @@ After successful completion of `kubeadm init` command, like we got the `kubeadm 
 
 
 
+### Refer following
+
+https://stackoverflow.com/a/52335566/9263418
+
