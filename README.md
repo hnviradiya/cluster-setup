@@ -77,6 +77,14 @@ If you are running in Virtual Machine make sure to disable swap if already enabl
 sudo swapoff -a
 ```
 
+Above will not work after machine restart. So edit fstab file and comment swap line permanently.
+
+
+```
+ vi /etc/fstab
+#comment out line with swap
+```
+
 Once the command `kubeadm init` is completed on the leader node, below we would get a command like below in the output of `kubeadm init` that can be run on worker nodes to make them join the leader node.
 
 ```
