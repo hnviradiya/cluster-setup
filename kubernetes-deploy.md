@@ -1,4 +1,4 @@
-### Set following environment variable on windows with Git BASH:
+### Execute following command on windows with Git BASH:
 
 ```
 base=https://github.com/docker/machine/releases/download/v0.16.0 \
